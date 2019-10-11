@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+
+    <script>
+
+
+
+        $(function () {
+                var params = {
+                    "userId":1,
+                    "productId":1,
+                    "quantity":1
+                };
+
+                $.ajax({
+                    type:"post",
+                    async:true,
+                    contentType:"application/json;charset=UTF-8",
+                    url:"/concurrency/purchase",
+                    data:JSON.stringify(params),
+                    success:function (data) {
+                        // alert(data.message);
+                    }
+                })
+
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
